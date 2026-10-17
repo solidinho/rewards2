@@ -34,7 +34,7 @@ window.AURORA = {
     { nome: "lauralmz_0", texto: "acho q vou fzr 2 vezes.. caiu certinho veyr", cor: "purple", imagem: "midia/avatares/jess.png", exemplo: true },
     { nome: "nanaminapi", texto: "CARALHO caiu os robux certinho", cor: "gold", imagem: "midia/avatares/noFilter.png", exemplo: true },
     { nome: "rip_julioo2", texto: "ah nao funcinou mesmo mn", cor: "blue", imagem: "midia/avatares/daniel.png", exemplo: true },
-    { nome: "danielzkxkp", texto: "400 robux facil dms ez", cor: "pink", imagem: "midia/avatares/dantas.png", exemplo: true },
+    { nome: "danielzkxkp", texto: "1000 robux facil dms ez", cor: "pink", imagem: "midia/avatares/dantas.png", exemplo: true },
     { nome: "yThizx", texto: "esses cara é barril caiu certinho", cor: "green", imagem: "midia/avatares/th.png", exemplo: true },
     { nome: "sol1dy", texto: "porra muito foda cai certinho tropa", cor: "purple", imagem: "midia/avatares/solid.png", exemplo: true },
   ]
