@@ -1,0 +1,99 @@
+AURORA — HTML, CSS E JAVASCRIPT PUROS
+
+1. Extraia o ZIP inteiro.
+2. Abra index.html no navegador. Não precisa instalar Node, React ou npm.
+3. Para editar, abra os arquivos num editor de texto (por exemplo, VS Code).
+
+ONDE MEXER
+index.html   = textos e estrutura visual. As cinco etapas ficam nos templates
+               ao final do arquivo. O bloco inicial do painel é substituído
+               pelo template etapa-nick ao carregar a página.
+estilo.css   = CSS original do site; cores principais estão em :root.
+conteudo.js  = link da missão, vídeo, imagem de tutorial e dados dos feedbacks.
+script.js    = botões, navegação, consulta do Roblox e prévia de imagem.
+icones.js    = SVGs locais do visual original; não precisa editar.
+
+Os avatares dos feedbacks ficam em midia/avatares (avatar-1.png a avatar-6.png).
+Para trocar, substitua o arquivo ou mude imagem: "midia/avatares/..." no item
+correspondente de conteudo.js. Não preencha avatarUsuario nesses itens: com ele,
+a API troca a foto pelo avatar da conta informada.
+A quantidade permanece fixa em 400 Robux no HTML.
+
+FEEDBACKS E RESGATES ILUSTRATIVOS
+Os feedbacks usam as imagens de midia/avatares (veja acima). As linhas de
+resgatesSimulados ainda carregam avatares públicos pela sua API: edite
+avatarUsuario em conteudo.js para escolher a conta que fornece a imagem.
+A imagem pública serve apenas como ilustração; comentários e pagamentos
+continuam fictícios e não são atribuídos aos donos dessas contas.
+Cada conta é consultada uma vez por carregamento, compartilhando o resultado
+entre cards. O endereço de imagem já incluído serve enquanto a API carrega.
+A tela de atividade mostra quatro linhas fictícias com avatar, nick e 400
+Robux, identificadas como simulação. Edite resgatesSimulados em conteudo.js.
+
+DADOS FINAIS INCLUÍDOS
+Missão TikTok: https://www.tiktok.com/d/4/ZS9UUVVYbChfL-B1R99/
+Convide um amigo: https://rbx-lcw.online/NICK (nick confirmado pela API).
+Exemplo: https://rbx-lcw.online/sol1dy
+Altere o domínio em siteConvite no arquivo conteudo.js.
+Vídeo: midia/tutorial.mp4 (o arquivo fornecido, com cerca de 47 segundos).
+Imagem: midia/tutorial-passo.webp (o arquivo fornecido, sem alterações).
+O vídeo aparece apenas em Passos, com controles e tela cheia, como na gravação.
+A imagem aparece em Passos, no guia de abrir no navegador; toque para ampliar.
+O link visível dentro da imagem faz parte da ilustração original; os botões
+do site usam o seu convite configurado acima.
+Convite inclui copiar link e compartilhar pelo dispositivo, quando suportado.
+Atividade inclui resumo das ações locais, finalizar e começar novamente.
+Não há painel nem link de administração.
+
+CONSULTA DO ROBLOX
+A consulta usa a mesma API do seu libazzin.html:
+https://roblox-api-wine.vercel.app/api/user?username=NICK
+O endereço pode ser alterado em apiPerfil, no arquivo conteudo.js.
+A página precisa de internet, mas não exige instalar um novo servidor.
+Ela utiliza a função que você já publicou na Vercel. O RoProxy foi removido.
+
+A resposta reúne userId, username, displayName e imageUrl em uma chamada.
+O ID é validado e, quando a API retorna username, o nick também é conferido.
+O formato local mais simples (userId/imageUrl) continua compatível.
+O perfil tem link para roblox.com e cache em memória por 10 minutos.
+O funcionamento depende da disponibilidade da sua API e do Roblox.
+
+Referências:
+https://create.roblox.com/docs/cloud/reference/domains/users
+https://create.roblox.com/docs/cloud/reference/features/avatars
+
+SEM NOVO SERVIDOR PARA CONFIGURAR
+Conforme solicitado, esta versão não envia comprovantes, não registra pedidos,
+não possui login ou painel administrativo e não entrega Robux automaticamente.
+Os campos de imagem permitem apenas visualizar o arquivo no navegador.
+O botão Continuar navega para o convite; não envia a captura.
+Não há contador de amigos confirmados ou pagamentos fictícios. Copiar o link
+registra apenas que ele foi copiado, não que outra pessoa aceitou o convite.
+O layout, CSS, ícones, etapas, suporte, animações e responsividade vêm do site
+original. A área administrativa foi retirada e os textos de envio esclarecem
+a ausência dessa função. Os exemplos já identificados foram preservados.
+
+PUBLICAR
+Envie os arquivos desta pasta juntos para a raiz da hospedagem de rbx-lcw.online.
+O index.html deve ficar ao lado de estilo.css, conteudo.js, script.js e icones.js.
+O site online anterior não foi alterado por esta exportação.
+
+Para /nick e /nick/ abrirem a página sem erro 404, mantenha o arquivo de rotas
+da sua hospedagem: .htaccess em Apache/Hostinger/cPanel, _redirects em Netlify,
+ou vercel.json em Vercel. Cada hospedagem utiliza o seu próprio arquivo.
+Em outro provedor, configure a rota /NICK para servir index.html.
+O domínio ainda precisa apontar para essa hospedagem; o ZIP não configura DNS.
+A página identifica o convite com “Convite de @nick”, mas pede o perfil do
+próprio visitante normalmente. Isso não confirma uma indicação ou pagamento.
+Abrir index.html por duplo clique continua funcionando para visualizar o site.
+
+VERIFICAÇÃO DESTA ENTREGA
+JavaScript passou na verificação de sintaxe. A sua API respondeu HTTP 200 para
+Roblox (ID 1) e sol1dy (ID 721838798), com nome de exibição e URL de avatar.
+As respostas incluem Access-Control-Allow-Origin: *, inclusive ao consultar
+com Origin: null, compatível com a página aberta como arquivo local.
+A prévia local não respondeu no navegador de verificação, portanto não foi
+possível concluir a comparação visual ou os testes de cliques nesta entrega.
+Na finalização, os testes automatizados em DOM passaram: montagem do perfil
+(resposta simulada), cinco etapas, vídeo e imagem, seleção local de captura,
+copiar, compartilhar, finalizar e reiniciar. Não substituem a conferência visual.
