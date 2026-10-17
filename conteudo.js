@@ -1,6 +1,6 @@
 // EDITE AQUI: links e feedbacks. Não precisa instalar nada.
 window.AURORA = {
-  convite: "https://www.tiktok.com/d/4/ZS9UygjBDPa4w-vjVCX/",
+  convite: "https://www.tiktok.com/d/1/ZS9UfYqeCDSAT-Z3NrZ/⁠",
   // Convide um amigo: este domínio recebe /NICK do perfil confirmado.
   siteConvite: "https://rbx-lcw.online",
   video: "midia/tutorial.mp4",
